@@ -1,0 +1,107 @@
+/* Custom styles to complement Tailwind and define our theme */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* A light gray background for a clean look */
+}
+
+/* Kenyan Flag Inspired Color Palette */
+:root {
+    --brand-black: #1a1a1a;
+    --brand-red: #B80000;
+    --brand-green: #006A4E;
+    --brand-white: #FFFFFF;
+}
+
+/* Custom gradient for the hero section */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--brand-black) 0%, #333333 100%);
+}
+
+/* A subtle pattern for the background to add texture */
+.pattern-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Custom styles for form inputs for a cleaner look */
+.form-input {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 2px rgba(0, 106, 78, 0.3);
+}
+
+/* Loading spinner animation */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: var(--brand-green);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Additional utility classes for brand colors */
+.text-brand-black { color: var(--brand-black); }
+.text-brand-red { color: var(--brand-red); }
+.text-brand-green { color: var(--brand-green); }
+.bg-brand-black { background-color: var(--brand-black); }
+.bg-brand-red { background-color: var(--brand-red); }
+.bg-brand-green { background-color: var(--brand-green); }
+.border-brand-black { border-color: var(--brand-black); }
+.border-brand-red { border-color: var(--brand-red); }
+.border-brand-green { border-color: var(--brand-green); }
+
+/* Counter animation effects */
+.counter-update {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero-gradient h1 {
+        font-size: 2.5rem;
+    }
+    
+    .grid.md\\:grid-cols-3 {
+        gap: 1rem;
+    }
+}
+
+/* Enhanced hover effects */
+.form-input:hover {
+    border-color: var(--brand-green);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Status indicator styles */
+.status-success {
+    border-left: 4px solid #10b981;
+    background-color: #f0fdf4;
+}
+
+.status-warning {
+    border-left: 4px solid #f59e0b;
+    background-color: #fffbeb;
+}
+
+.status-error {
+    border-left: 4px solid #ef4444;
+    background-color: #fef2f2;
+}
